@@ -1,0 +1,516 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; 
+}
+
+
+main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("assets/img/bg.jpg");
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 76vw;
+  margin: auto;
+  height: 85px;
+}
+
+.bgtext {
+  align-items: center;
+  justify-content: center;
+  height: 76%;
+  display: flex;
+  color: rgb(255, 255, 255);
+  position: relative;
+  gap: 20px;
+  flex-direction: column;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+#signinbox {
+  background-color: red;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  height: 2.1em;
+  width: 6em;
+  cursor: pointer;
+  
+}
+
+#signinbox a {
+  color: white;
+  text-decoration: none;
+}
+
+#languagebox {
+  background-color: rgba(53, 47, 47, 0.1);
+  color: rgb(255, 255, 255);
+  height: 2.5em;
+  width: 9em;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 550;
+  border-color: white;
+}
+
+.navrightcorner {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.bgtext h1 {
+  font-weight: 900;
+  font-size: 48px;
+  font-family: sans-serif;
+}
+
+.bgtext p {
+  font-weight: 400;
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+.bgtext h3 {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+#getstartedbox {
+  background-color: red;
+  color: white;
+  font-size: 24px;
+  border-radius: 5px;
+  font-weight: 550;
+  text-align: center;
+  height: 60px;
+  width: 210px;
+  cursor: pointer;
+}
+
+#emailaddressbox {
+  font-family: sans-serif;
+  font-weight: 400;
+  width: 345px;
+  border-radius: 4.5px;
+  background-color: rgba(22, 21, 21, 0.69);
+  font-size: 18px;
+  color: rgba(255, 255, 255);
+  padding: 0.5rem 1rem 0.5rem;
+  line-height: 18px;
+  height: 60px;
+  border: 0.1px solid white;
+}
+
+#emailaddressbox::placeholder {
+  color: rgb(194, 195, 203);
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bottomtext {
+  display: flex;
+  gap: 6px;
+}
+
+.firstSeparation {
+  height: 7px;
+  background-color: rgb(40, 38, 38);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* top section of html is done*/
+
+/* first Section  */
+
+.box {
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.section {
+  color: rgb(233, 233, 233);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
+  padding-right: 1%;
+}
+
+.secText h2 {
+  font-weight: 900;
+  font-size: 48px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.secText p {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.secImg {
+  width: 50%;
+  padding-left: 1%;
+  position: relative;
+}
+
+.secImg img {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+
+.secImg video {
+  position: absolute;
+  top: 20%;
+  right: 12%;
+  width: 73%;
+}
+
+.seperation {
+  height: 7px;
+  background-color: rgb(40, 38, 38);
+}
+
+  /* second section */
+
+.secondSecImg {
+  width: 50%;
+  padding-left: 1%;
+  position: relative;
+}
+
+#secondSecImgOne {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+.secondSecImgBox {
+  position: absolute;
+  top: 71%;
+  left: 25%;
+  height: 20%;
+  width: 52%;
+  background-color: rgb(0, 0, 0);
+  z-index: 50;
+  border-radius: 10px;
+  border: 0.2px solid white;
+}
+
+/* third section */
+
+.thirdsecImg {
+  width: 50%;
+  padding-left: 1%;
+  position: relative;
+}
+
+.thirdsecImg img {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.thirdsecImg video {
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  width: 100%;
+  max-width: 63%;
+  max-height: 47%;
+}
+
+/* Frequently Asked Questions section */
+
+.fourthSection {
+  color: rgb(255, 255, 255);
+  margin-left: 11vw;
+  margin-right: 11vw;
+}
+
+.secList {
+  margin-top: 25px;
+}
+.secHeading h2 {
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 48px;
+  font-family: sans-serif;
+}
+
+.secList ul {
+  list-style-type: none;
+}
+
+.secList button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 85px;
+  padding: 24px;
+  margin-bottom: 7px;
+  max-width: 100vw;
+  background-color: #2d2d2d;
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+.secList button:hover {
+  background-color: #414141;
+  transition: all 0.5s ease-out;
+}
+ 
+.content {
+  background-color: #2d2d2d;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: sans-serif;
+  width: 100%;
+  max-width: 100vw;
+  display: none;
+  padding: 10px 0;
+}
+/* .content {
+  display: none;
+  padding: 10px 0;
+} */
+
+/* button.active + .content {
+  display: block;
+} */
+
+
+.formstyle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 30px;
+  margin: 0vw 7vw;
+}
+.foursecForm{
+  margin-top: 45px;
+}
+form h3 {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+form .bottomtext{
+  margin-top: 16px;
+}
+
+/* footer section */
+
+footer{
+  padding:55px 11% 20px;
+}
+
+.footerRow1 h4{
+  font-size: 18px;
+  text-align: start;
+  letter-spacing: normal;
+  color: #ffffff ;
+  opacity: 70%;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+
+}
+.footerRow2{
+  margin: 20px 0%;
+}
+
+.footerRow2 {
+  font-size: 18px;
+  text-align: left;
+  letter-spacing: normal;
+  color: #ffffff ;
+  opacity: 70%;
+  font-family: sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.column1 p, .column2 p,.column3 p, .column4 p{
+  margin-bottom:10% ;
+}
+
+.footerRow4{
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif;
+  margin-top: 35px;
+}
+
+
+/* signin page css */
+.signinpage {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("assets/img/bg.jpg");
+  
+}
+.signinpage > header{
+  margin: 0 8vw;
+  padding:20px 45px;
+}
+  
+.logincredential{
+  position:absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 350px;
+  padding: 60px 30px;
+}
+
+.logincredential h2{
+  color: white;
+  font-size: 32px;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+.logincredential form {
+  margin: 25px 0px 35px;
+}
+.formcontrol{
+  height: 65px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+form #emailaddress , #password{
+  height: 100%;
+  width: 100%;
+  background-color:rgba(22,21,21,0.7);
+  border-radius: 5px;
+  border: 0.1px solid white;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  padding: 0px 18px;
+  box-sizing: border-box;
+  
+}
+
+#signin{
+  background-color: red;
+  height: 45px;
+  width: 100%;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* resposive design of index.html  */
+@media (max-width: 960px) {
+  nav {
+    flex-direction: row;
+    height: auto;
+    padding: 1em 0;
+    margin: 0px 15px;
+    max-width: 100vw;
+  }
+  nav img{
+    content:url(assets/img/mini\ logo.png);
+    mix-blend-mode: difference;
+    width: 50px;
+  }
+
+  .navrightcorner {
+    flex-direction: row;
+    gap: 10px;
+    padding-right: 20px;
+    
+  }
+  #languagebox{
+    border-radius: 20px;
+  }
+  
+  #signinbox{
+    border-radius: 20px;
+  }
+
+  .bgtext{
+    gap: 15px;
+  }
+
+  .bgtext h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .bgtext p, .bgtext h3 {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* .bottomtext #emailaddressbox,
+  .bottomtext #getstartedbox{
+    width: 100%;
+  }
+
+  .bottomtext input,
+  .bottomtext button {
+    width: 100%;
+  } */
+}

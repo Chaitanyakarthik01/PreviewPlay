@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="signinpage">
+        <header>
+            <img width="150" src="assets/img/logo.svg">
+        </header>
+        <div class="logincredential">
+            <h2>Sign In</h2>
+            <form onsubmit="auth(event)">
+                <div class="formcontrol">
+                    <input id="emailaddress" type="email" required autocomplete="off"
+                        placeholder="Email or mobile number">
+                </div>
+                <div class="formcontrol">
+                    <input id="password" type="password" required autocomplete="off" placeholder="Password">
+                </div>
+                <button type="submit" id="signin">Sign In</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footerRows">
+            <div class="footerRow1">
+                <h4>Questions? Call 000-800-040-1843</h4>
+            </div>
+            <div class="footerRow2">
+                <div class="column1">
+                    <p>FAQ</p>
+                    <p>Privacy</p>
+                </div>
+                <div class="column2">
+                    <p>Help Centre</p>
+                    <p>Cookie Preferences</p>
+                </div>
+                <div class="column3">
+                    <p>Corporate Information</p>
+                </div>
+                <div class="column4">
+                    <p>Terms of Use</p>
+                </div>
+            </div>
+            <div class="footerRow3">
+                <button id="languagebox">English</button>
+            </div>
+            <div class="footerRow4">
+                <p>Netflix India</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

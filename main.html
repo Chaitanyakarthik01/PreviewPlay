@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+   
+    <header>
+        <nav>
+            <div class="logo">
+                <img width="140" src="assets/img/logo.svg">
+            </div>
+            <ul class="menu">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="tvshows">TV Shows</a></li>
+                <li><a href="movies">Movies</a></li>
+            </ul>
+            <div class="search_container">
+                <input type="text" id="searchInput" autocomplete="off" placeholder="Search Movies...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel Start -->
+    <div class="carousel">
+        <button class="carousel-btn prev">‹</button>
+        <div class="carousel_images"></div>
+        <div class="carousel_contents">
+            <h1 class="carousel_title"></h1>
+            <p class="carousel_details"></p>
+            <div class="carousel_description"></div>
+        </div>
+        <button class="carousel-btn next">›</button>
+    </div>
+    <!-- Carousel End -->
+
+    <div class="row">
+        <div class="movies-container"></div>
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>

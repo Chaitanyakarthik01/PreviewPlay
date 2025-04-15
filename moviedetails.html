@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="moviedetails.css">
+</head>
+
+<body>
+
+    <div class="movie-container">
+        <div class="movie-details">
+            <h1 id="movie-title"></h1>
+            <p id="movie-overview"></p>
+            <p id="movie-release"></p>
+            <button id="play-trailer">▶ Play Trailer</button>
+        </div>
+        <div class="movie-image"></div>
+    </div>
+
+    <script>
+        const API_KEY = 'd92a8cd2fc953e1b600568b97180bdf9';
+        const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
+        const PLACEHOLDER_IMAGE = 'https://via.placeholder.com/500x750?text=No+Image+Available';
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const movieId = urlParams.get('id');
+
+            if (!movieId) {
+                alert("Movie not found!");
+                window.location.href = "main.html";
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&append_to_response=images,videos`);
+                const movie = await response.json();
+
+                // Set background image (poster or backdrop)
+                document.querySelector('.movie-container').style.backgroundImage =
+                    `url(${IMAGE_BASE_URL}${movie.backdrop_path || movie.poster_path || PLACEHOLDER_IMAGE})`;
+
+                // Get title card (if available) or fallback to logo
+                const logos = movie.images.logos;
+                const titleCard = logos.find(img => img.iso_639_1 === "en") || logos[0];
+
+                if (titleCard) {
+                    const titleImg = document.createElement('img');
+                    titleImg.src = `${IMAGE_BASE_URL}${titleCard.file_path}`;
+                    titleImg.alt = movie.title;
+                    titleImg.classList.add('movie-title-image');
+                    document.querySelector('.movie-details').prepend(titleImg);
+                } else {
+                    document.getElementById('movie-title').textContent = movie.title; // Fallback text
+                }
+
+                document.getElementById('movie-overview').textContent = movie.overview;
+                document.getElementById('movie-release').textContent = `Release Date: ${movie.release_date} | Rating: ${movie.vote_average}`;
+
+                // Play trailer button
+                const trailerBtn = document.getElementById('play-trailer');
+                const trailer = movie.videos.results.find(vid => vid.type === "Trailer");
+
+                if (trailer) {
+                    trailerBtn.addEventListener('click', () => {
+                        window.open(`https://www.youtube.com/watch?v=${trailer.key}`, '_blank');
+                    });
+                } else {
+                    trailerBtn.style.display = 'none';
+                }
+
+            } catch (error) {
+                console.error("Error fetching movie details:", error);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
