@@ -6,14 +6,25 @@ PreviewPlay is a fully responsive, professional, and interactive frontend-based 
 
 ## 🚀 Live Demo
 
-🔗 [PreviewPlay Live](https://chaitanyakarthik01.github.io/PreviewPlay/) — *(GitHub Pages Deployment)*
+🔗 [PreviewPlay Live](https://chaitanyakarthik01.github.io/PreviewPlay/)
 
-💡 Features
+🔐 Credentials
+Use the following credentials to log in and explore the website:
+
+Email: testuser@example.com
+Password: Test@4321
+
+## 💡 Features
 🎞️ Movie categories carousel with TMDB API integration
+
 🔍 Search functionality
+
 🎥 Movie detail page with overview, rating and trailer
+
 📱 Fully responsive across all devices
+
 💻 Clean UI inspired by Netflix
+
 🎨 Modern animations and hover effects
 
 ## 📸 Screenshots

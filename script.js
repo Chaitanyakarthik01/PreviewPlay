@@ -14,7 +14,7 @@ function auth(event) {
     var emailaddress = document.getElementById('emailaddress').value;
     var password = document.getElementById('password').value;
 
-    if (emailaddress === 'admin@gmail.com' && password === 'karthik') {
+    if (emailaddress === 'testuser@example.com' && password === 'Test@4321') {
         localStorage.setItem("isAuthenticated", "true");
         alert("Login successful!");
         window.location.href = 'main.html';
