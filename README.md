@@ -9,6 +9,7 @@ PreviewPlay is a fully responsive, professional, and interactive frontend-based 
 🔗 [PreviewPlay Live](https://chaitanyakarthik01.github.io/PreviewPlay/)
 
 🔐 Credentials
+
 Use the following credentials to log in and explore the website:
 
 Email: testuser@example.com
@@ -29,10 +30,17 @@ Password: Test@4321
 
 ## 📸 Screenshots
 
-![Home Page](assets/screenshots/home-page.png) |
-![Sign In](assets/screenshots/sign-in-page.png) |
-![Main Page](assets/screenshots/main-page.png) |
-![Movie Details](assets/screenshots/movie-details-page.png) |
+#### 🏠 Home Page  
+![Home Page](assets/screenshots/home-page.png)
+
+#### 🔐 Sign In Page  
+![Sign In](assets/screenshots/sign-in-page.png)
+
+#### 🎬 Main Page  
+![Main Page](assets/screenshots/main-page.png)
+
+#### 🎥 Movie Details Page  
+![Movie Details](assets/screenshots/movie-details-page.png)
 
 
 

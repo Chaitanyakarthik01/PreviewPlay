@@ -1,11 +1,40 @@
-const buttons = document.querySelectorAll(".secList button");
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btn.classList.toggle("active");
-    const content = btn.parentElement.nextElementSibling;
-    content.style.display = content.style.display === "block" ? "none" : "block";
+// const buttons = document.querySelectorAll(".secList button");
+// buttons.forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     btn.classList.toggle("active");
+//     const content = btn.parentElement.nextElementSibling;
+//     content.style.display = content.style.display === "block" ? "none" : "block";
+//   });
+// });
+
+
+  const buttons = document.querySelectorAll(".secList button");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Close all other contents
+      buttons.forEach((otherBtn) => {
+        const otherContent = otherBtn.parentElement.nextElementSibling;
+        if (otherBtn !== btn) {
+          otherBtn.classList.remove("active");
+          otherContent.style.maxHeight = null;
+        }
+      });
+
+      // Toggle current one
+      btn.classList.toggle("active");
+      const content = btn.parentElement.nextElementSibling;
+
+      if (btn.classList.contains("active")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
   });
-});
+
+
+
 
 
 function auth(event) {
@@ -36,6 +65,7 @@ const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 const TRENDING_MOVIES_URL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`;
 
 // Carousel elements
+const carousel = document.querySelector('.carousel');
 const carouselImages = document.querySelector('.carousel_images');
 const carouselTitle = document.querySelector('.carousel_title');
 const carouselDetails = document.querySelector('.carousel_details');
@@ -100,12 +130,14 @@ prevBtn.addEventListener('click', moveToPreviousSlide);
 
 // Auto-scroll every 3 seconds
 let autoScroll = setInterval(moveToNextSlide, 3000);
-carouselImages.addEventListener('mouseenter', () => clearInterval(autoScroll));
-carouselImages.addEventListener('mouseleave', () => {
-    if (!autoScroll) {
-        autoScroll = setInterval(moveToNextSlide, 3000);
-    }
+carousel.addEventListener('mouseenter', () => {
+  clearInterval(autoScroll);
 });
+
+carousel.addEventListener('mouseleave', () => {
+  autoScroll = setInterval(moveToNextSlide, 3000);
+});
+
 
 // Navigate to movie details page
 function navigateToMovieDetails(movieId) {

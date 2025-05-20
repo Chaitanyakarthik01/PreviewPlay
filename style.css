@@ -2,14 +2,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
-
 
 main {
   height: 100vh;
@@ -18,9 +19,9 @@ main {
   background-position: center;
   background-size: cover;
   background-image: linear-gradient(
-      rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.85)
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.9)
     ),
     url("assets/img/bg.jpg");
 }
@@ -33,111 +34,102 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 76vw;
+  height: 90px;
+  max-width: 80vw;
   margin: auto;
-  height: 85px;
 }
 
 .bgtext {
-  align-items: center;
-  justify-content: center;
-  height: 76%;
+  height: 75%;
   display: flex;
+  justify-content: center;
   color: rgb(255, 255, 255);
   position: relative;
-  gap: 20px;
   flex-direction: column;
-  padding-top: 3%;
-  padding-bottom: 3%;
 }
 
 #signinbox {
-  background-color: red;
-  font-size: 16px;
-  border-radius: 5px;
+  font-size: 18px;
   font-weight: 600;
-  text-align: center;
-  height: 2.1em;
-  width: 6em;
+  height: 1.9em;
+  width: 5em;
   cursor: pointer;
-  
+  border: 0.1px solid;
+  border-radius: 25px;
+  margin-left: 6px;
 }
 
 #signinbox a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
 #languagebox {
   background-color: rgba(53, 47, 47, 0.1);
   color: rgb(255, 255, 255);
-  height: 2.5em;
-  width: 9em;
-  border-radius: 4px;
-  text-align: center;
+  height: 1.9em;
+  width: 7em;
+  font-size: 18px;
   font-weight: 550;
-  border-color: white;
-}
-
-.navrightcorner {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+  border-radius: 25px;
+  border: 0.1px solid white;
 }
 
 .bgtext h1 {
-  font-weight: 900;
-  font-size: 48px;
-  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .bgtext p {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 24px;
-  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 1.2rem;
 }
 
 .bgtext h3 {
   font-weight: 400;
-  font-size: 20px;
-  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: center;
 }
 
-#getstartedbox {
-  background-color: red;
-  color: white;
-  font-size: 24px;
-  border-radius: 5px;
-  font-weight: 550;
-  text-align: center;
-  height: 60px;
-  width: 210px;
-  cursor: pointer;
+.bottomtext {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 1rem;
 }
 
 #emailaddressbox {
-  font-family: sans-serif;
-  font-weight: 400;
-  width: 345px;
-  border-radius: 4.5px;
+  width: 100%;
+  max-width: 345px;
+  padding: 0.5rem 1rem;
+  height: 55px;
   background-color: rgba(22, 21, 21, 0.69);
-  font-size: 18px;
-  color: rgba(255, 255, 255);
-  padding: 0.5rem 1rem 0.5rem;
-  line-height: 18px;
-  height: 60px;
+  color: #fff;
+  font-size: 1rem;
   border: 0.1px solid white;
+  border-radius: 5px;
+}
+
+#getstartedbox {
+  width: 100%;
+  max-width: 210px;
+  height: 55px;
+  background-color: rgb(229, 9, 20);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 550;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 #emailaddressbox::placeholder {
   color: rgb(194, 195, 203);
   font-weight: 400;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.bottomtext {
-  display: flex;
-  gap: 6px;
 }
 
 .firstSeparation {
@@ -149,60 +141,56 @@ nav {
   width: 100%;
 }
 
-/* top section of html is done*/
+/* top section of index.html done*/
 
 /* first Section  */
 
 .box {
-  padding-top: 4%;
-  padding-bottom: 4%;
+  padding: 4% 0;
 }
 
 .section {
   color: rgb(233, 233, 233);
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin: 0 10vw;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .secText {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 50%;
-  padding-right: 1%;
+  text-align: center;
 }
 
 .secText h2 {
   font-weight: 900;
-  font-size: 48px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
 }
-.secText p {
+
+.secText h5 {
   margin-top: 20px;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .secImg {
-  width: 50%;
-  padding-left: 1%;
+  width: 100%;
   position: relative;
 }
 
 .secImg img {
   width: 100%;
-  position: relative;
-  z-index: 50;
 }
 
 .secImg video {
   position: absolute;
   top: 20%;
-  right: 12%;
-  width: 73%;
+  right: 13%;
+  width: 100%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  z-index: -2;
 }
 
 .seperation {
@@ -210,19 +198,8 @@ nav {
   background-color: rgb(40, 38, 38);
 }
 
-  /* second section */
+/* second section */
 
-.secondSecImg {
-  width: 50%;
-  padding-left: 1%;
-  position: relative;
-}
-
-#secondSecImgOne {
-  width: 100%;
-  position: relative;
-  z-index: 50;
-}
 .secondSecImgBox {
   position: absolute;
   top: 71%;
@@ -237,44 +214,31 @@ nav {
 
 /* third section */
 
-.thirdsecImg {
-  width: 50%;
-  padding-left: 1%;
-  position: relative;
-}
-
-.thirdsecImg img {
-  width: 100%;
-  position: relative;
-  z-index: 10;
-}
-
 .thirdsecImg video {
   position: absolute;
-  top: 12%;
-  left: 20%;
-  width: 100%;
   max-width: 63%;
   max-height: 47%;
+  z-index: -2;
+  top: 9%;
+  left: 19%;
 }
 
 /* Frequently Asked Questions section */
 
 .fourthSection {
   color: rgb(255, 255, 255);
-  margin-left: 11vw;
-  margin-right: 11vw;
+  padding: 0 9.25vw;
 }
 
 .secList {
-  margin-top: 25px;
+  margin: 25px 0px 45px;
 }
+
 .secHeading h2 {
   display: flex;
   justify-content: center;
   font-weight: 800;
-  font-size: 48px;
-  font-family: sans-serif;
+  font-size: 2.7rem;
 }
 
 .secList ul {
@@ -282,235 +246,394 @@ nav {
 }
 
 .secList button {
-  display: flex;
-  align-items: center;
+  text-align: left;
   width: 100%;
-  height: 85px;
   padding: 24px;
-  margin-bottom: 7px;
-  max-width: 100vw;
+  height: 80px;
   background-color: #2d2d2d;
   color: white;
   cursor: pointer;
-  font-family: sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
+  border: 0;
+  margin-bottom: 3px;
 }
+
 .secList button:hover {
   background-color: #414141;
-  transition: all 0.5s ease-out;
 }
- 
+
 .content {
   background-color: #2d2d2d;
-  font-size: 24px;
-  font-weight: 400;
-  font-family: sans-serif;
-  width: 100%;
-  max-width: 100vw;
-  display: none;
-  padding: 10px 0;
+  font-size: 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease-out;
+  padding: 0 1rem;
 }
-/* .content {
-  display: none;
-  padding: 10px 0;
-} */
 
-/* button.active + .content {
-  display: block;
-} */
-
-
-.formstyle{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0px 30px;
-  margin: 0vw 7vw;
+.secList li {
+  margin-bottom: 6px;
 }
-.foursecForm{
-  margin-top: 45px;
-}
+
 form h3 {
   font-weight: 400;
-  font-size: 20px;
-  font-family: sans-serif;
-}
-form .bottomtext{
-  margin-top: 16px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 /* footer section */
 
-footer{
-  padding:55px 11% 20px;
+footer {
+  padding: 50px 10% 100px;
 }
 
-.footerRow1 h4{
+.footerRow1,
+.footerRow2,
+.footerRow3,
+.footerRow4,
+.footerRow5 {
+  margin-top: 35px;
+}
+
+.footerRow1 h4 {
   font-size: 18px;
   text-align: start;
   letter-spacing: normal;
-  color: #ffffff ;
+  color: #ffffff;
   opacity: 70%;
-  font-family: sans-serif;
   font-weight: 500;
-  margin-bottom: 10px;
-
-}
-.footerRow2{
-  margin: 20px 0%;
 }
 
 .footerRow2 {
   font-size: 18px;
   text-align: left;
   letter-spacing: normal;
-  color: #ffffff ;
+  color: #ffffff;
   opacity: 70%;
-  font-family: sans-serif;
   font-weight: 500;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-.column1 p, .column2 p,.column3 p, .column4 p{
-  margin-bottom:10% ;
+
+.column1 p,
+.column2 p,
+.column3 p,
+.column4 p {
+  margin-bottom: 10%;
 }
 
-.footerRow4{
+.footerRow4 {
   color: white;
   font-size: 18px;
-  font-family: sans-serif;
-  margin-top: 35px;
 }
 
-
 /* signin page css */
+
 .signinpage {
   position: relative;
   height: 100vh;
   width: 100%;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("assets/img/bg.jpg");
-  
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("assets/img/bg.jpg");
 }
-.signinpage > header{
-  margin: 0 8vw;
-  padding:20px 45px;
+
+.signinpage > header {
+  margin: 0;
+  padding: 20px 30px;
 }
-  
-.logincredential{
-  position:absolute;
+
+.logincredential {
+  position: absolute;
   left: 50%;
-  top:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.75);
-  width: 350px;
+  width: 345px;
   padding: 60px 30px;
 }
 
-.logincredential h2{
+.logincredential h2 {
   color: white;
-  font-size: 32px;
-  font-family: sans-serif;
+  font-size: 2rem;
   width: 100%;
 }
 
 .logincredential form {
   margin: 25px 0px 35px;
 }
-.formcontrol{
+
+.formcontrol {
   height: 65px;
   margin-bottom: 16px;
   width: 100%;
 }
 
-form #emailaddress , #password{
+form #emailaddress,
+#password {
   height: 100%;
   width: 100%;
-  background-color:rgba(22,21,21,0.7);
-  border-radius: 5px;
-  border: 0.1px solid white;
+  background-color: rgba(22, 21, 21, 0.7);
+  border-radius: 0.25rem;
+  border: 1px solid rgb(91, 89, 89);
   color: rgb(255, 255, 255);
   font-size: 18px;
   padding: 0px 18px;
   box-sizing: border-box;
-  
 }
 
-#signin{
-  background-color: red;
+#signin {
+  background-color: rgb(229, 9, 20);
   height: 45px;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: white;
+  font-size: 1rem;
   font-weight: 600;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
   text-decoration: none;
+  border: 0px;
 }
 
-
-
-
-
-
-
-
 /* resposive design of index.html  */
-@media (max-width: 960px) {
-  nav {
-    flex-direction: row;
-    height: auto;
-    padding: 1em 0;
-    margin: 0px 15px;
-    max-width: 100vw;
+@media only screen and (min-width: 1280px) {
+  .secImg {
+    max-width: 600px;
   }
-  nav img{
-    content:url(assets/img/mini\ logo.png);
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  main {
+    height: 85vh;
+    background-size: cover;
+  }
+
+  nav {
+    max-width: 85vw;
+    height: 80px;
+  }
+
+  .bgtext h1 {
+    font-size: 2.5rem;
+  }
+
+  .box {
+    padding: 3% 0;
+  }
+
+  .secImg {
+    max-width: 600px;
+  }
+
+  .secText h2 {
+    font-size: 2rem;
+  }
+
+  .secText h5 {
+    font-size: 1rem;
+  }
+
+  .fourthSection {
+    padding: 0 5rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  nav {
+    max-width: 93vw;
+    height: 80px;
+  }
+
+  nav img {
+    width: 100px;
+  }
+
+  main {
+    height: 70vh;
+  }
+
+  .bgtext {
+    padding: 0 5rem;
+  }
+
+  .bgtext h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .bgtext p {
+    font-size: 1rem;
+  }
+
+  #getstartedbox {
+    font-size: 1.3rem;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .secText h2 {
+    font-size: 2rem;
+  }
+
+  .secText h5 {
+    font-size: 0.875rem;
+  }
+
+  .secHeading h2 {
+    font-size: 1.5rem;
+  }
+
+  .secList button {
+    font-size: 1rem;
+    height: 72px;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+
+  .fourthSection {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    max-width: 90vw;
+    height: 80px;
+  }
+
+  nav img {
+    content: url(assets/img/mini\ logo.png);
     mix-blend-mode: difference;
     width: 50px;
   }
 
-  .navrightcorner {
-    flex-direction: row;
-    gap: 10px;
-    padding-right: 20px;
-    
-  }
-  #languagebox{
-    border-radius: 20px;
-  }
-  
-  #signinbox{
-    border-radius: 20px;
+  main {
+    height: 75vh;
   }
 
-  .bgtext{
-    gap: 15px;
+  #languagebox {
+    width: 5em;
+    font-size: 16px;
+  }
+
+  #signinbox {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .bgtext {
+    padding: 0 2rem;
   }
 
   .bgtext h1 {
-    font-size: 32px;
-    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
   }
 
-  .bgtext p, .bgtext h3 {
-    font-size: 20px;
-    text-align: center;
-    padding: 0 10px;
+  .bgtext p {
+    font-size: 1rem;
   }
 
-  /* .bottomtext #emailaddressbox,
-  .bottomtext #getstartedbox{
-    width: 100%;
+  .bottomtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .bottomtext input,
-  .bottomtext button {
-    width: 100%;
-  } */
+  #emailaddressbox {
+    max-width: 500px;
+    height: 50px;
+  }
+
+  #getstartedbox {
+    max-width: 175px;
+    font-size: 1.3rem;
+    height: 50px;
+  }
+
+  .firstSeparation {
+    height: 3px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .secText h2 {
+    font-size: 1.7rem;
+  }
+
+  .secText h5 {
+    font-size: 0.875rem;
+  }
+
+  .secHeading h2 {
+    font-size: 1.5rem;
+  }
+
+  .seperation {
+    height: 3px;
+  }
+
+  .secList button {
+    font-size: 1rem;
+    height: 72px;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+
+  .fourthSection {
+    padding: 0 1.2rem;
+  }
+
+  .secList li {
+    margin-bottom: 4px;
+  }
+}
+/* resposive design of index.html is completed */
+
+/* responsive design of signin.html page  */
+
+@media only screen and (min-width: 1280px) {
+  .signinpage > header {
+    margin: 0 8vw;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+}
+
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  .signinpage img {
+    width: 130px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .signinpage img {
+    width: 130px;
+  }
+
+  .logincredential {
+    width: 300px;
+    padding: 50px 20px;
+  }
 }
