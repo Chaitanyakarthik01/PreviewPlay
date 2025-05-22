@@ -12,8 +12,9 @@ PreviewPlay is a fully responsive, professional, and interactive frontend-based 
 
 Use the following credentials to log in and explore the website:
 
-Email: testuser@example.com
-Password: Test@4321
+Email: Testuser@example.com
+
+Password: Test@1234
 
 ## 💡 Features
 🎞️ Movie categories carousel with TMDB API integration

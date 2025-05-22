@@ -357,9 +357,9 @@ footer {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.85);
   width: 345px;
-  padding: 60px 30px;
+  padding: 30px 30px;
 }
 
 .logincredential h2 {
@@ -367,6 +367,7 @@ footer {
   font-size: 2rem;
   width: 100%;
 }
+
 
 .logincredential form {
   margin: 25px 0px 35px;
@@ -391,6 +392,7 @@ form #emailaddress,
   box-sizing: border-box;
 }
 
+
 #signin {
   background-color: rgb(229, 9, 20);
   height: 45px;
@@ -402,6 +404,10 @@ form #emailaddress,
   cursor: pointer;
   text-decoration: none;
   border: 0px;
+  margin-bottom: 40px;
+}
+.logincredential:hover  h3{
+  color: rgb(112, 113, 111);
 }
 
 /* resposive design of index.html  */
@@ -618,9 +624,6 @@ form #emailaddress,
   }
 }
 
-@media only screen and (min-width: 960px) and (max-width: 1280px) {
-}
-
 @media only screen and (min-width: 600px) and (max-width: 960px) {
   .signinpage img {
     width: 130px;
@@ -634,6 +637,6 @@ form #emailaddress,
 
   .logincredential {
     width: 300px;
-    padding: 50px 20px;
+    padding: 20px 20px;
   }
 }
