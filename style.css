@@ -523,7 +523,6 @@ form #emailaddress,
 
   nav img {
     content: url(assets/img/mini\ logo.png);
-    mix-blend-mode: difference;
     width: 50px;
   }
 

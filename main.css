@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 html,
@@ -36,14 +37,11 @@ nav {
   width: 100%;
 }
 
-.logo {
-  margin: 0px 30px;
-}
-
 .menu {
   display: flex;
   list-style: none;
   gap: 25px;
+  margin-left: 20px;
 }
 
 .menu a {
@@ -64,7 +62,6 @@ nav {
 }
 
 #searchInput {
-  font-family: sans-serif;
   font-weight: 400;
   width: 100%;
   border-radius: 8px;
@@ -99,6 +96,7 @@ nav {
 
 .carousel_images {
   display: flex;
+  width: 100%;
   transition: transform 0.5s ease;
 }
 
@@ -113,9 +111,15 @@ nav {
 .carousel_contents {
   position: absolute;
   bottom: 10%;
-  left: 20px;
+  left: 10px;
+  right: 10px;
   color: rgb(255, 255, 255);
+  backdrop-filter: blur(8px);
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  padding: 10px;
 }
+
 
 .carousel-btn {
   position: absolute;
@@ -143,6 +147,11 @@ nav {
 
 .next {
   right: 10px;
+}
+
+.row h1{
+  margin-left: 20px;
+  font-size: 3rem;
 }
 
 .rowposter {
@@ -176,10 +185,11 @@ nav {
   margin-top: 20px;
   color: white;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 700;
   opacity: 0;
   transition: opacity 0.3s ease;
   text-align: center;
+  text-wrap-mode: wrap;
 }
 
 .movie-item:hover .movie-title {
@@ -201,3 +211,150 @@ nav {
   cursor: pointer;
 }    
 
+
+
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  nav {
+    padding: 15px 30px;
+  }
+
+  .carousel_contents {
+    bottom: 8%;
+    left: 15px;
+  }
+
+  .carousel_title {
+    font-size: 2rem;
+  }
+
+  .poster {
+    width: 240px;
+    height: 135px;
+  }
+
+  .movie-title {
+    font-size: 16px;
+  }
+
+
+  #searchInput {
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  nav {
+    gap: 10px;
+    padding: 10px 20px;
+  }
+  
+  nav img {
+    width: 100px;
+  }
+
+  .carousel_contents {
+    bottom: 6%;
+    left: 10px;
+  }
+
+  .carousel_title {
+    font-size: 1.6rem;
+  }
+
+  .rowposter{
+    padding: 7px 0 0 ;
+    gap: 3%;
+  }
+
+  .poster {
+    width: 210px;
+    height: 120px;
+
+  }
+
+  #searchInput {
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  nav {
+    align-items: flex-start;
+    padding: 5px 15px;
+  }
+
+   nav img {
+    content: url(assets/img/mini\ logo.png);
+    width: 50px;
+  }
+  
+  .menu {
+    display: none;
+  }
+
+  .carousel {
+    height: 60vh;
+  }
+
+  .carousel_images img {
+    height: 60vh;
+  }
+
+  .carousel_contents{
+    bottom: 5%;
+  }
+
+  .carousel_title {
+    font-size: 1.2rem;
+  }
+
+  .carousel_description{
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  }
+
+  .row h1{
+  margin-left: 10px;
+  font-size: 2rem;
+}
+  .row{
+    margin: 5px 10px;
+  }
+  
+  .rowposter{
+    padding: 7px 0 0 ;
+    gap: 3%;
+  }
+
+  .poster {
+    width: 210px;
+    height: 120px;
+
+  }
+
+  .poster:hover {
+  transform: none;
+  }
+
+  .movie-title {
+    font-size: 14px;
+  }
+
+  .search_container {
+    width: 100%;
+    margin-top: 10px;
+    max-width: 150px;
+  }
+
+  #searchInput {
+    font-size: 14px;
+    padding: 0.4rem 2.2rem 0.4rem;
+  }
+}

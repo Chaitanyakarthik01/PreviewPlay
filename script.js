@@ -1,14 +1,4 @@
-// const buttons = document.querySelectorAll(".secList button");
-// buttons.forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     btn.classList.toggle("active");
-//     const content = btn.parentElement.nextElementSibling;
-//     content.style.display = content.style.display === "block" ? "none" : "block";
-//   });
-// });
-
-
-  const buttons = document.querySelectorAll(".secList button");
+const buttons = document.querySelectorAll(".secList button");
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -128,14 +118,14 @@ function moveToPreviousSlide() {
 nextBtn.addEventListener('click', moveToNextSlide);
 prevBtn.addEventListener('click', moveToPreviousSlide);
 
-// Auto-scroll every 3 seconds
-let autoScroll = setInterval(moveToNextSlide, 3000);
+// Auto-scroll every 6 seconds
+let autoScroll = setInterval(moveToNextSlide, 6000);
 carousel.addEventListener('mouseenter', () => {
   clearInterval(autoScroll);
 });
 
 carousel.addEventListener('mouseleave', () => {
-  autoScroll = setInterval(moveToNextSlide, 3000);
+  autoScroll = setInterval(moveToNextSlide, 5000);
 });
 
 
@@ -148,7 +138,7 @@ function navigateToMovieDetails(movieId) {
 const categories = {
     "Indian Movies": `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_origin_country=IN`,
     "Popular": `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`,
-    "Comedy": `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=35`,
+    "Horror": `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27`,
     "Action": `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=28`,
 };
 
